@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* p{
+    color: sienna;
+    border: 2px solid black;
+    padding: 50px 40px 25px 10px;
+    margin: 50px;
+} */
+#lorem{
+    color: sienna;
+    /* margin-top: ; */
+    border: 2px solid black;
+    padding: 50px 40px 25px 10px;
+    margin: 50px;
+}
+.intro{
+    background-color: brown;
+    color: beige;
+    text-align: center;
+    display: inline;
+    padding: 5px 10px;
+    margin: 0px auto;
+}
+form{
+    margin-bottom: 30px;
+}
+label{
+    color: brown;
+}
