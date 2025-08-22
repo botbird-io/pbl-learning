@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en" data-theme="retro">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <title>Vite App</title>
+  </head>
+  <body class="flex min-h-screen justify-center items-center">
+    <div class="card bg-base-200 shadow-2xl w-xl justify-evenly items-center h-100">
+      <h1 class="text-2xl card-title">Calculator</h1>
+      <div class="flex justify-around w-full">
+        <input class="input input-neutral text-center w-60" type="number" name="num1" id="num1" placeholder="Enter first number"/>
+        <input class="input input-neutral text-center w-60" type="number" name="num2" id="num2" placeholder="Enter second number"/>
+      </div>
+      <div class="w-sm h-10 card flex justify-center items-center bg-primary text-primary-content" id="answer">
+        Your answer will appear here
+      </div>
+      <div class="flex justify-around w-full">
+        <button class="btn btn-neutral" id="add">+</button>
+        <button class="btn btn-neutral" id="sub">-</button>
+        <button class="btn btn-neutral" id="mul">*</button>
+        <button class="btn btn-neutral" id="div">/</button>
+      </div>
+    </div>
+  </body>
+</html>
+  
+<script type="module" src="/src/main.js"></script>
