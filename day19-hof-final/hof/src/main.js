@@ -42,6 +42,8 @@ var arr = [{
 // arr.map(function(elem, index){
 //   console.log(elem)
 // })
+// map returns an new array
+// [undefined,undefined,undefined,......] ----> in above case because our function is not returning anything
 
 // var filterArr = arr.filter(function(elem, index){
 //   return elem.price<=1000
@@ -92,3 +94,17 @@ var prod = arr2.reduce(function(aggr,elem){
 })
 
 console.log(prod)
+
+//chaining
+
+var ans = arr.map(function (elem, index){
+  return elem.price
+}).map(function(elem,index){
+  return elem * 2
+}).filter(function(elem,index){
+  return index < 4
+}).reduce(function(aggr,elem,index){
+  return aggr + elem
+})
+
+console.log(ans)
