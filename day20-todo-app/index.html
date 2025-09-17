@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en" data-theme="retro">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <title>Vite App</title>
+  </head>
+  <body class="">
+    <h1 class="text-center my-10 text-4xl font-bold underline">Todo App</h1>
+
+    <div class="px-5 flex justify-around">
+      <form class="w-sm shadow-2xl p-5 flex flex-col">
+        <label for="task-name" >Task Name</label>
+        <input class="input w-full mb-4" type="text" name="task-name" placeholder="Enter Task Name" />
+        <label for="priority">Priority</label>
+        <select name="priority" class="select w-full mb-7">
+          <option disabled selected>Select Priority</option>
+          <option>High</option>
+          <option>Low</option>
+        </select>
+        <input class="btn btn-primary" type="submit"/>
+      </form>
+
+      <div class=" rounded-box border border-base-content/5 bg-base-100 w-xl">
+        <table class="table">
+          <!-- head -->
+          <thead class="bg-primary text-primary-content">
+            <tr>
+              <th class="text-center">Task Name</th>
+              <th class="text-center border-x border-white">Priority</th>
+              <th class="text-center">Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- row 1 -->
+            <!-- <tr>
+              <td>Cy Ganderton</td>
+              <td>Quality Control Specialist</td>
+              <td>Blue</td>
+            </tr> -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+    
+  </body>
+</html>
+  
+<script type="module" src="/src/main.js"></script>
