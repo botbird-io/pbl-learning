@@ -1,15 +1,9 @@
-var arr = [{
-  task_name : "Study",
-  priority : "High"
-},{
-  task_name : "Cleaning",
-  priority : "Low"
-}]
+var arr = []
 
 var tbody = document.querySelector("tbody")
 
 function displayRows(tasks){
-  // tbody.innerHTML = null
+  tbody.innerHTML = null
 
   tasks.forEach(function(elem,index){
     var tr = document.createElement("tr")
@@ -21,9 +15,10 @@ function displayRows(tasks){
     td2.innerText = elem.priority
     td3.innerText = "Delete"
 
-    td1.className = "text-center"
-    td2.className = "text-center"
-    td3.className = "text-center"
+    var tdClasses = "text-center"    
+    td1.className = tdClasses
+    td2.className = tdClasses
+    td3.className = tdClasses
 
     tr.append(td1,td2,td3)
     tbody.append(tr)
@@ -32,3 +27,20 @@ function displayRows(tasks){
 }
 
 displayRows(arr)
+var input = document.querySelector("input")
+var select = document.querySelector("select")
+
+// display on submit
+document.querySelector('form').addEventListener("submit",function(e){
+  e.preventDefault()
+
+  var task_name = input.value
+  var priority = select.value
+
+  arr.push({
+    task_name : task_name,
+    priority : priority
+  })
+
+  displayRows(arr)
+})
