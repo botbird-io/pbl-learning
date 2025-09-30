@@ -1,17 +1,3 @@
-var arr = [{
-  priority : "High",
-  task_name : "Study"
-},{
-  priority : "Low",
-  task_name : "Sleep"
-},{
-  priority : "High",
-  task_name : "Study"
-},{
-  priority : "Low",
-  task_name : "Sleep"
-}]
-
 var tbody = document.querySelector("tbody")
 
 function displayRows(tasks){
@@ -53,6 +39,7 @@ function displayRows(tasks){
 
 }
 
+var arr = JSON.parse(localStorage.getItem("tasks"))
 displayRows(arr)
 var input = document.querySelector("input")
 var select = document.querySelector("select")
@@ -76,3 +63,34 @@ function deleteRow(index){
   arr.splice(index,1)
   displayRows(arr)
 }
+
+// persistant storage using localstorage
+
+// localStorage.setItem("username","Akash")
+
+var username = localStorage.getItem("username")
+
+if(username != ""){
+  console.log(document.getElementById("username").innerText)
+  document.getElementById("username").innerText = username
+}
+
+// above example is for string, number, boolean
+
+// localStorage.setItem("age",20)
+
+console.log(typeof Number(localStorage.getItem("age"))) // number
+console.log(typeof +localStorage.getItem("age")) // number
+
+console.log( typeof +"90") //number
+console.log( +"askjdhkjashd") // number but NaN
+
+// _______________________________________________________________________________________
+
+// example for array and objects
+
+// localStorage.setItem("tasks",JSON.stringify(arr))
+
+// JSON 
+
+console.log(JSON.parse(localStorage.getItem("tasks")))
